@@ -40,7 +40,7 @@ export default function HomePage() {
           height="57"
         />
 
-        <p className="eyebrow">Sacramento, California</p>
+        <p className="eyebrow">Placerville, California</p>
         <h1>Erin Austin</h1>
         <p className="subtitle">DaBella Home Improvement Specialist</p>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
         </div>
 
         <p className="footer-note">
-          Proudly serving homeowners in and around Sacramento, CA.
+          Proudly serving homeowners in and around Placerville, CA.
         </p>
       </div>
     </main>

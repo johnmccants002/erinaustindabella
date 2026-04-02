@@ -20,7 +20,7 @@ const links = [
   {
     title: "Book a Free Quote",
     description: "Start your home improvement conversation with DaBella.",
-    href: "https://dabella.us/",
+    href: "https://dabella.us/get-quote/",
     cta: "Get Free Quote",
   },
 ];

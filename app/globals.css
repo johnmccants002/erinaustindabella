@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+:root {
+  --brand-green-bright: #96d700;
+  --brand-green: #74bc1e;
+  --brand-green-dark: #4b8c19;
+  --brand-gray: #64665b;
+  --text-main: #1f241e;
+  --surface: #f6f9f2;
+  --surface-strong: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Source Sans 3", "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 14% 10%, rgba(150, 215, 0, 0.28), transparent 30%),
+    radial-gradient(circle at 90% 85%, rgba(116, 188, 30, 0.34), transparent 33%),
+    linear-gradient(180deg, #fbfdf7 0%, #eef6e4 100%);
+}
+
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  padding: 28px 16px 40px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+.bg-orb-top {
+  width: 360px;
+  height: 360px;
+  top: -110px;
+  right: -80px;
+  background: linear-gradient(
+    135deg,
+    rgba(150, 215, 0, 0.3),
+    rgba(116, 188, 30, 0.18)
+  );
+}
+
+.bg-orb-bottom {
+  width: 300px;
+  height: 300px;
+  left: -70px;
+  bottom: -90px;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 140, 25, 0.2),
+    rgba(100, 102, 91, 0.13)
+  );
+}
+
+.linktree-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  padding: 24px 18px 22px;
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--surface-strong) 92%, var(--brand-green-bright));
+  border: 1px solid rgba(100, 102, 91, 0.13);
+  box-shadow:
+    0 16px 40px rgba(55, 65, 41, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.brand-logo {
+  width: min(248px, 72vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--brand-green-dark);
+}
+
+h1 {
+  margin: 7px 0 0;
+  font-family: "Montserrat", "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(1.9rem, 6vw, 2.7rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 8px auto 0;
+  max-width: 35ch;
+  text-align: center;
+  color: var(--brand-gray);
+  font-weight: 540;
+}
+
+.trust-row {
+  margin: 18px 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.trust-row span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #224013;
+  background: rgba(150, 215, 0, 0.19);
+  border: 1px solid rgba(75, 140, 25, 0.28);
+}
+
+.links-wrap {
+  display: grid;
+  gap: 11px;
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ed 100%);
+  border: 1px solid rgba(100, 102, 91, 0.2);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  opacity: 0;
+  animation: rise-in 0.45s ease forwards;
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(116, 188, 30, 0.72);
+  box-shadow: 0 10px 20px rgba(72, 91, 39, 0.15);
+}
+
+.link-card h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.link-card p {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  color: var(--brand-gray);
+}
+
+.cta-text {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #17310d;
+  background: linear-gradient(135deg, var(--brand-green-bright), var(--brand-green));
+}
+
+.footer-note {
+  margin: 16px 4px 0;
+  text-align: center;
+  color: #4f5347;
+  font-size: 0.88rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 740px) {
+  .page-shell {
+    padding: 44px 22px;
+  }
+
+  .linktree-card {
+    padding: 32px 30px 26px;
+    border-radius: 28px;
+  }
+
+  .link-card {
+    padding: 17px 18px;
+  }
+
+  .link-card h2 {
+    font-size: 1.08rem;
+  }
+
+  .cta-text {
+    font-size: 0.8rem;
+    padding: 9px 13px;
+  }
+}
